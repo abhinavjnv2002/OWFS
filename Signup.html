@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Weather Forecasting</title>
+    <link rel="stylesheet" href="Signup.css">
+</head>
+<body>
+
+<header>
+    <h1>Weather Forecasting</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<main class="signup-container">
+    <section class="signup-form">
+        <h2>Create an Account</h2>
+        <form action="Signup.php" method="post" onsubmit="return validateForm()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" onclick="
+                let usernameInput = document.querySelector('#username');
+                let passwordInput = document.querySelector('#password');
+                let existingUser = localStorage.getItem(usernameInput.value);
+
+                if(existingUser !== null) {
+                    alert('Username already exists!');
+                } else {
+                    localStorage.setItem(usernameInput.value, passwordInput.value);
+                    alert('Sign up successful!');
+                    window.location.href = 'Login.html'; // Redirect to Login.html
+                }
+            ">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="Login.html">Sign In</a></p>
+    </section>
+</main>
+
+<footer>
+    &copy; 2023 Weather Forecasting. All rights reserved.
+</footer>
+
+<script>
+    function validateForm() {
+        // You can add client-side validation here if needed
+        return true;
+    }
+</script>
+
+</body>
+</html>

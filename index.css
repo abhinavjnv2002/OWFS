@@ -1,0 +1,138 @@
+/* Add these styles to your existing index.css file or create a new one */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('Images/img-2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: fadeIn 1s ease-in-out;
+}
+
+header {
+    background-color: rgb(28, 28, 93);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav {
+    background-color: rgb(28, 28, 131);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ff9900;
+}
+
+main {
+    padding: 20px;
+}
+
+.weather-container {
+    text-align: center;
+    margin: 50px auto; /* Center the container horizontally */
+    animation: fadeIn 1.5s ease-in-out;
+    background-color: rgba(237, 237, 246, 0.9);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.temperature {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+.location, .description {
+    margin-top: 10px;
+    color: #666;
+}
+
+/* Styles for the search form */
+
+#searchForm {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    animation: slideIn 1s ease-in-out;
+}
+
+label {
+    margin-right: 10px;
+    color: #333;
+}
+
+#city {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #4800ff;
+}
+
+footer {
+    background-color: rgb(28, 28, 131);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries for responsiveness */
+
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .weather-container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    #searchForm {
+        margin: 10px auto;
+    }
+}

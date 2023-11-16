@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecasting</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header>
+    <h1>Weather Forecasting</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <a href="Login.html">Login</a>
+    </nav>
+</header>
+
+<main>
+    <section class="weather-container">
+        <img class="weather-icon" src="icons/sun/26.png" alt="Weather Icon">
+        <div class="temperature">25°C</div>
+        <div class="location">City, Country</div>
+        <div class="description">Partly Cloudy</div>
+        <div class="footer">Weather Forecast</div>
+        <form id="searchForm">
+            <label for="city">Search Cities:</label>
+            <input type="text" id="city" name="city" placeholder="Enter city name" required>
+            <button type="submit" id="searchBtn">Search</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    &copy; 2023 Weather Forecasting. All rights reserved.
+</footer>
+<script src="new.js"></script>
+</body>
+</html>
