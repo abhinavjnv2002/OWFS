@@ -11,8 +11,8 @@
 <header>
     <h1>Weather Forecasting</h1>
     <nav>
-        <a href="#">Home</a>
-        <a href="">About</a>
+        <a href="#" onclick="showWeather()">Home</a>
+        <a href="#" onclick="showAbout()">About</a>
         <a href="#">Services</a>
         <a href="#">Contact</a>
         <a href="Login.html">Login</a>
@@ -20,11 +20,11 @@
 </header>
 
 <main>
-    <section class="weather-container">
+    <section class="weather-container" id="weatherContainer">
         <img class="weather-icon" src="icons/sun/26.png" alt="Weather Icon">
-        <div class="temperature">25°C</div>
+        <div class="temperature">0°C</div>
         <div class="location">City, Country</div>
-        <div class="description">Partly Cloudy</div>
+        <div class="description">condition</div>
         <div class="footer">Weather Forecast</div>
         <form id="searchForm">
             <label for="city">Search Cities:</label>
@@ -32,11 +32,46 @@
             <button type="submit" id="searchBtn">Search</button>
         </form>
     </section>
+
+    <section class="about-container" id="aboutContainer" style="display: none; text-align: center;
+    margin: 50px auto; 
+    animation: fadeIn 1.5s ease-in-out;
+    background-color: rgba(237, 237, 246, 0.9);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    ">
+        <h2>About Weather Forecasting</h2>
+        <p style="position: relative;
+        display: inline-block;
+        font-size: 18px;
+        color: #333;
+        padding: 5px;">
+            Weather forecasting is the application of science and technology to predict the conditions of the atmosphere for a given location and time. It helps individuals and organizations make informed decisions about their activities, considering weather conditions.
+            <br>Weather forecasting faces multifaceted challenges stemming from data quality, computational limitations, modeling complexities, and resource constraints. Balancing the need for accurate predictions with the constraints of available data, computing power, and budgetary limitations remains a perpetual challenge. <br>
+            Efforts in weather forecasting necessitate continual innovation, such as improved data assimilation techniques, higher-resolution models, and enhanced communication strategies for uncertainty. Overcoming these constraints demands collaborative efforts across scientific disciplines, technological advancements, and sustained investments in infrastructure and research. <br>
+            While constraints exist, advancements in technology and a deeper understanding of atmospheric processes offer hope for addressing these challenges. With ongoing dedication to overcoming limitations, weather forecasting can continue to evolve, providing increasingly accurate and timely information for public safety, disaster preparedness, and various industries reliant on weather-related insights.
+        </p>
+
+    </section>
 </main>
 
 <footer>
     &copy; 2023 Weather Forecasting. All rights reserved.
 </footer>
+
 <script src="new.js"></script>
+<script>
+    function showWeather() {
+        document.getElementById('weatherContainer').style.display = 'block';
+        document.getElementById('aboutContainer').style.display = 'none';
+    }
+
+    function showAbout() {
+        document.getElementById('weatherContainer').style.display = 'none';
+        document.getElementById('aboutContainer').style.display = 'block';
+    }
+</script>
 </body>
 </html>
