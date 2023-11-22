@@ -12,7 +12,7 @@
     <h1>Weather Forecasting</h1>
     <nav>
         <a href="index.html">Home</a>
-        <a href="#">About</a>
+        <a href="#" onclick="showLoginAlert()">About</a>
         <a href="#">Services</a>
         <a href="#">Contact</a>
     </nav>
@@ -37,7 +37,12 @@
 <footer>
     &copy; 2023 Weather Forecasting. All rights reserved.
 </footer>
+
 <script>
+    function showLoginAlert() {
+        alert('Please log in to view the About section!');
+    }
+
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault();
         
@@ -53,5 +58,6 @@
         }
     });
 </script>
+
 </body>
 </html>
